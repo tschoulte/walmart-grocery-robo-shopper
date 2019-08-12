@@ -6,6 +6,7 @@ def get_pos():
     return gui.position()
 
 def clear_cart(items):
+
     for i in range(items):
         gui.click(1106,400)
         time.sleep(.30)
@@ -16,4 +17,6 @@ def clear_cart(items):
             pass
 
 #print(get_pos())
-clear_cart(36)
+clear_cart(80)
+
+#gui.moveTo(700,700,.5)
