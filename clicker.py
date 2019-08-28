@@ -16,7 +16,7 @@ def setup_logger(location):
 
 def load_workbook(location, maxRows):
     wb = openpyxl.load_workbook(location)
-    ws = wb['Sheet2']
+    ws = wb['Sheet1']
 
     db = []
     not_added = []
@@ -89,7 +89,9 @@ def click_plus(quantity, itemURL, failed):
 
 
 setup_logger("error.log")
-maxRow = 59
-db = load_workbook("Steward Logistics.xlsx", maxRow)
+maxRow = 83
+db = load_workbook("Second Grocery Run.xlsx", maxRow)
+
+#test DB
 #db = [["https://grocery.walmart.com/ip/Great-Value-Deli-Style-Sliced-Pepper-Jack-Cheese-8-oz-12-count/155066735" , 13],["https://grocery.walmart.com/ip/Sam-s-Choice-Sliced-Monterey-Jack-Cheese-with-Jalapenos-Habaneros-and-Ghost-Peppers-8-Oz/146364618", 4],["https://grocery.walmart.com/ip/Great-Value-Cracker-Cuts-Pepper-Jack-Cheese-Slices-10-Oz/681794103" , 3],["https://grocery.walmart.com/ip/Wonder-Classic-White-Bread-20-oz-Loaf/37858875", 5]]
 shop(db)
